@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import user from './components/json_info/user.json'
+import friends from './components/json_info/friends.json'
+import statisticalData from './components/json_info/statistical-data.json'
+import transactions from './components/json_info/transactions.json';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App
+      user={user}
+      friends={friends}
+      statisticalData={statisticalData}
+      transactions={transactions}
+    />
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
